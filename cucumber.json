@@ -8,6 +8,10 @@
     "dryRun": false,
     "require": ["src/test/steps/*.ts", "src/test/hook/hooks.ts"],
     "requireModule": ["ts-node/register"],
-    "format": ["html:cucumber-report.html"]
+    "format": [
+      "progress-bar",
+      "html:./test-results/cucumber-report.html",
+      "json:./test-results/cucumber-report.json"
+    ]
   }
 }

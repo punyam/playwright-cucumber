@@ -1,28 +1,25 @@
-// const report = require("multiple-cucumber-html-reporter");
+import { generate } from "multiple-cucumber-html-reporter";
 
-// report.generate({
-//   jsonDir: "test-results",
-//   reportPath: "test-results/reports/",
-//   reportName: "Playwright Automation Report",
-//   pageTitle: "BookCart App test report",
-//   displayDuration: false,
-//   metadata: {
-//     browser: {
-//       name: "chrome",
-//       version: "112",
-//     },
-//     device: "PP - PC",
-//     platform: {
-//       name: "MacOS",
-//       version: "Sequoia 15.1",
-//     },
-//   },
-//   customData: {
-//     title: "Test Info",
-//     data: [
-//       { label: "Project", value: "Book Cart Application" },
-//       { label: "Release", value: "1.2.3" },
-//       { label: "Cycle", value: "Smoke-1" },
-//     ],
-//   },
-// });
+generate({
+  jsonDir: "test-results", // Path where JSON files are stored
+  reportPath: "test-results/reports", // Path to generate the HTML report
+  metadata: {
+    browser: {
+      name: "chrome",
+      version: "112", // Specify your browser version
+    },
+    device: "Local test machine",
+    platform: {
+      name: "windows", // Change to your OS
+      version: "10",
+    },
+  },
+  customData: {
+    title: "Run Info",
+    data: [
+      { label: "Project", value: "Playwright with Cucumber" },
+      { label: "Release", value: "1.0.0" },
+      { label: "Execution Date", value: new Date().toLocaleDateString() },
+    ],
+  },
+});

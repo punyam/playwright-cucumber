@@ -1,6 +1,6 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 import { chromium, Page, Browser, expect } from "@playwright/test";
-import { pageFixture } from "../hook/pageFixture";
+import { pageFixture } from "../../hook/pageFixture";
 
 // let browser: Browser;
 // let page: Page;

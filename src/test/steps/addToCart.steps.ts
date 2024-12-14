@@ -4,7 +4,7 @@ import { chromium, Page, Browser } from "@playwright/test";
 setDefaultTimeout(60 * 1000 * 2);
 
 import { expect } from "@playwright/test";
-import { pageFixture } from "../hook/pageFixture";
+import { pageFixture } from "../../hook/pageFixture";
 
 Given("user search for a {string}", async function (book) {
   await pageFixture.page.locator("input[type='search']").type(book);
